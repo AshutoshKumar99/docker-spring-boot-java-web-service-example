@@ -34,7 +34,7 @@ pipeline {
                     def dockerImage = "ashutoshkumar999/docker-spring-boot-java-web-service:${BUILD_NUMBER}" // Define Docker image name with build number
                     sshagent(credentials: ['sshcred']) { // Use SSH credentials
                         sh """
-                            ssh -o StrictHostKeyChecking=no ubuntu@65.1.136.93 <<EOF
+                            ssh -o StrictHostKeyChecking=no ubuntu@43.205.231.70 <<EOF
                             docker pull ${dockerImage} // Pull the Docker image
 
                             # Stop and remove any container using port 80
